@@ -78,13 +78,10 @@ post_class: post-template
             </div>
 
             <!-- Rating -->
-            {% if page.score %}
-                {% include render_score.html name="Rating" score=page.score%}
-            {% endif %}
-            {% if page.nose and page.taste and page.finish %}
-                {% include render_score.html name="Nose" score=page.nose%}
-                {% include render_score.html name="Taste" score=page.taste%}
-                {% include render_score.html name="Finish" score=page.finish%}
+            {% if page.rating %}
+            <div class="rating mb-4 d-flex align-items-center">
+                <strong class="mr-1">Rating:</strong> {% include star_rating.html %}
+            </div>
             {% endif %}
 
             <!-- Post Date -->
@@ -160,7 +157,7 @@ post_class: post-template
 <!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
 https://search.google.com/structured-data/testing-tool/u/0/
 ================================================== -->
-{% if page.score %}
+{% if page.rating %}
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",
@@ -176,8 +173,8 @@ https://search.google.com/structured-data/testing-tool/u/0/
   "datePublished": "{{ page.date | date:"%Y-%m-%d" }}",
   "reviewRating": {
     "@type": "Rating",
-    "ratingValue": "{{ page.score }}",
-    "bestRating": "100"
+    "ratingValue": "{{ page.rating }}",
+    "bestRating": "5"
   }
 }
 </script>

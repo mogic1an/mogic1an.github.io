@@ -1,0 +1,12 @@
+{% assign urlfirst = page.url | split: '/' %}
+{% assign urlfirst = urlfirst[1] %}
+{% if urlfirst == "wh" %}
+  {%   assign liquor_type = "Whisky" %}
+{% elsif urlfirst == "br" %}
+  {%   assign liquor_type = "Brandy"%}
+{% elsif urlfirst == "ag"%}
+    {% assign liquor_type = "Agave"%}
+{% else %}
+  {%   assign liquor_type = "Liquor"%}
+{% endif %}
+{% assign liquor_type_slug = liquor_type | slugify %}

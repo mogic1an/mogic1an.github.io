@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Clynelish"
+author: tony
+image: assets/images/2.jpg
+categories:
+  - whisky
+  - scotch
+aliases: 
+distillery: Clynelish
+Vintage: 2006
+Age: 17
+bottler:
+  - GM
+  - AMOY
+Serie: 
+Strength: 58.2
+Cask Type:
+  - 1st Fill Bourbon Barrel
+score: 20
+nose: 88
+taste: 88
+finish: 87
+price/ml: 
+date: 2024-03-14
+WB: https://www.whiskybase.com/whiskies/whisky/247045/caol-ila-2006-gm
+Cask Number: "305289"
+---
+## Nose
+bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus
+
+## Taste
+Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes
+
+## Finish
+Some bean paste, charcoal, some seaweed, brown sugar

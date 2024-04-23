@@ -1,7 +1,7 @@
 # Site
-name: "Mediumish"
-title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
+name: "Joy of Whisky"
+title: "Joy of Whisky"
+description: "A small whisky note site"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
@@ -14,23 +14,43 @@ destination: docs/
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
+  tony:
+    name: Tony
+    display_name: Tony
+    avatar: 'assets/images/avatar.png'
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: wowthemesnet@gmail.com
     web: https://www.wowthemes.net
     twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John    
-    avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+    description: "M0g1c1an"
+
+
+# Collections
+collections:
+  distillery_infos:
+    defaults:
+      layout: post
+    output: true
+    permalink: distillery/:path/details.html
+  bottler_infos:
+    defaults:
+      layout: post
+    output: true
+    permalink: bottler/:path/details.html
+
+
+defaults:
+  - scope:
+      type: distilleries
+    values:
+      layout: distillery
+      permalink: distillery/:path/
+  - scope:
+      type: bottlers 
+    values:
+      layout: distillery
+      permalink: bottler/:path/
+
 
 # Plugins
 plugins:
@@ -44,9 +64,13 @@ plugins:
 jekyll-archives:
   enabled:
     - categories
+    - bottler
+    - distillery
   layout: archive
   permalinks:
     category: '/category/:name/'
+    bottler: '/bottler/:name/'
+    distillery: '/distillery/:name/'
     
 # Pagination 
 paginate: 6
