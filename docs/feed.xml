@@ -5,12 +5,12 @@
     <description>A small whisky note site</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Apr 2024 07:49:10 +0800</pubDate>
-    <lastBuildDate>Thu, 11 Apr 2024 07:49:10 +0800</lastBuildDate>
+    <pubDate>Thu, 25 Apr 2024 03:31:02 +0800</pubDate>
+    <lastBuildDate>Thu, 25 Apr 2024 03:31:02 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Whisky</title>
+        <title>Laphroaig</title>
         <description>&lt;h2 id=&quot;nose&quot;&gt;Nose&lt;/h2&gt;
 &lt;p&gt;bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus&lt;/p&gt;
 
@@ -21,64 +21,79 @@
 &lt;p&gt;Some bean paste, charcoal, some seaweed, brown sugar&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 Mar 2024 00:00:00 +0800</pubDate>
-        <link>/whisky/</link>
-        <guid isPermaLink="true">/whisky/</guid>
+        <link>/posts/whisky/</link>
+        <guid isPermaLink="true">/posts/whisky/</guid>
+        
         
         <category>whisky</category>
         
         <category>scotch</category>
         
-        
-        <category>Jekyll</category>
-        
       </item>
     
       <item>
-        <title>Brandy</title>
+        <title>testflight</title>
         <description>&lt;h2 id=&quot;nose&quot;&gt;Nose&lt;/h2&gt;
-&lt;p&gt;cucumber, honey, caramel, umami, grape, cream, vanilla, some cinnamon, damp wool, stewed apple&lt;/p&gt;
+&lt;p&gt;bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus&lt;/p&gt;
 
 &lt;h2 id=&quot;taste&quot;&gt;Taste&lt;/h2&gt;
-&lt;p&gt;wtf, lots of weird spices. star anise, black pepper, bit of tanning, underripe melons, not quite sweet, some hint of grape (like a grappa)&lt;/p&gt;
+&lt;p&gt;Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes&lt;/p&gt;
 
 &lt;h2 id=&quot;finish&quot;&gt;Finish&lt;/h2&gt;
-&lt;p&gt;like a pot of stewed meat, lots of spices like cardamom, star anise, nutmeg, some maillard reaction, caramel, a bit saltiness&lt;/p&gt;
+&lt;p&gt;Some bean paste, charcoal, some seaweed, brown sugar&lt;/p&gt;
 </description>
         <pubDate>Thu, 14 Mar 2024 00:00:00 +0800</pubDate>
-        <link>/brandy/</link>
-        <guid isPermaLink="true">/brandy/</guid>
-        
-        <category>brandy</category>
-        
-        <category>cognac</category>
+        <link>/posts/lala/</link>
+        <guid isPermaLink="true">/posts/lala/</guid>
         
         
-        <category>Jekyll</category>
+        <category>whisky</category>
+        
+        <category>scotch</category>
         
       </item>
     
       <item>
-        <title>Mezcal</title>
+        <title>Caol Ila</title>
         <description>&lt;h2 id=&quot;nose&quot;&gt;Nose&lt;/h2&gt;
-&lt;p&gt;ginger, pepper, plastic, rubber, petrol, paint, molasses, olive, grass, a little bit funkiness, yogurt, little bit of pepper&lt;/p&gt;
+&lt;p&gt;bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus&lt;/p&gt;
 
 &lt;h2 id=&quot;taste&quot;&gt;Taste&lt;/h2&gt;
-&lt;p&gt;from pineapple, coffee, sugarcane to petrol, plastic, sesame, almond, tannin&lt;/p&gt;
+&lt;p&gt;Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes&lt;/p&gt;
 
 &lt;h2 id=&quot;finish&quot;&gt;Finish&lt;/h2&gt;
-&lt;p&gt;almond, sweet, grass&lt;/p&gt;
-
+&lt;p&gt;Some bean paste, charcoal, some seaweed, brown sugar&lt;/p&gt;
 </description>
-        <pubDate>Thu, 22 Feb 2024 00:00:00 +0800</pubDate>
-        <link>/agave/</link>
-        <guid isPermaLink="true">/agave/</guid>
-        
-        <category>mezcal</category>
-        
-        <category>agave</category>
+        <pubDate>Thu, 14 Mar 2024 00:00:00 +0800</pubDate>
+        <link>/posts/brandy/</link>
+        <guid isPermaLink="true">/posts/brandy/</guid>
         
         
-        <category>Jekyll</category>
+        <category>whisky</category>
+        
+        <category>scotch</category>
+        
+      </item>
+    
+      <item>
+        <title>Caol Ila 2</title>
+        <description>&lt;h2 id=&quot;nose&quot;&gt;Nose&lt;/h2&gt;
+&lt;p&gt;bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus&lt;/p&gt;
+
+&lt;h2 id=&quot;taste&quot;&gt;Taste&lt;/h2&gt;
+&lt;p&gt;Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes&lt;/p&gt;
+
+&lt;h2 id=&quot;finish&quot;&gt;Finish&lt;/h2&gt;
+&lt;p&gt;Some bean paste, charcoal, some seaweed, brown sugar&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 Mar 2024 00:00:00 +0800</pubDate>
+        <link>/posts/agave/</link>
+        <guid isPermaLink="true">/posts/agave/</guid>
+        
+        
+        <category>whisky</category>
+        
+        <category>scotch</category>
         
       </item>
     

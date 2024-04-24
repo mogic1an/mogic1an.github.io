@@ -11,24 +11,24 @@ var documents = [{
     "body": "This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.  Documentation: Please, read the docs here. Questions or bug reports?: Head over to our Github repository! Buy me a coffeeThank you for your support! Your donation helps me to maintain and improve Mediumish . Buy me a coffee Documentation"
     }, {
     "id": 2,
+    "url": "/blog",
+    "title": "Blogs",
+    "body": ""
+    }, {
+    "id": 3,
+    "url": "/bottler",
+    "title": "Distilleries",
+    "body": "haha "
+    }, {
+    "id": 4,
     "url": "/categories",
     "title": "Categories",
     "body": ""
     }, {
-    "id": 3,
-    "url": "/ag",
-    "title": "Agave Home",
-    "body": ""
-    }, {
-    "id": 4,
-    "url": "/br",
-    "title": "Brandy Home",
-    "body": ""
-    }, {
     "id": 5,
-    "url": "/wh",
-    "title": "Whisky Home",
-    "body": ""
+    "url": "/distillery",
+    "title": "Distilleries",
+    "body": "haha 12345 Caol Ila  Laphroaig  Clynelish "
     }, {
     "id": 6,
     "url": "/",
@@ -36,24 +36,59 @@ var documents = [{
     "body": ""
     }, {
     "id": 7,
+    "url": "/note",
+    "title": "notes",
+    "body": ""
+    }, {
+    "id": 8,
+    "url": "/distillery/Caol%20Ila/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 9,
+    "url": "/distillery/Laphroaig/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 10,
+    "url": "/distillery/Clynelish/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 11,
+    "url": "/bottler/GM/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 12,
+    "url": "/bottler/AMOY/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 13,
     "url": "/robots.txt",
     "title": "",
     "body": "      Sitemap: {{ “sitemap. xml”   absolute_url }}   "
     }, {
-    "id": 8,
-    "url": "/whisky/",
-    "title": "Whisky",
+    "id": 14,
+    "url": "/posts/whisky/",
+    "title": "Laphroaig",
     "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }, {
-    "id": 9,
-    "url": "/brandy/",
-    "title": "Brandy",
-    "body": "2024/03/14 - Nose: cucumber, honey, caramel, umami, grape, cream, vanilla, some cinnamon, damp wool, stewed apple Taste: wtf, lots of weird spices. star anise, black pepper, bit of tanning, underripe melons, not quite sweet, some hint of grape (like a grappa) Finish: like a pot of stewed meat, lots of spices like cardamom, star anise, nutmeg, some maillard reaction, caramel, a bit saltiness "
+    "id": 15,
+    "url": "/posts/lala/",
+    "title": "testflight",
+    "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }, {
-    "id": 10,
-    "url": "/agave/",
-    "title": "Mezcal",
-    "body": "2024/02/22 - Nose: ginger, pepper, plastic, rubber, petrol, paint, molasses, olive, grass, a little bit funkiness, yogurt, little bit of pepper Taste: from pineapple, coffee, sugarcane to petrol, plastic, sesame, almond, tannin Finish: almond, sweet, grass "
+    "id": 16,
+    "url": "/posts/brandy/",
+    "title": "Caol Ila",
+    "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
+    }, {
+    "id": 17,
+    "url": "/posts/agave/",
+    "title": "Caol Ila 2",
+    "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }];
 
 var idx = lunr(function () {
