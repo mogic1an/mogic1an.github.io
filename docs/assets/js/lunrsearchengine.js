@@ -17,8 +17,8 @@ var documents = [{
     }, {
     "id": 3,
     "url": "/bottler",
-    "title": "Distilleries",
-    "body": "haha "
+    "title": "Bottlers",
+    "body": ""
     }, {
     "id": 4,
     "url": "/categories",
@@ -28,7 +28,7 @@ var documents = [{
     "id": 5,
     "url": "/distillery",
     "title": "Distilleries",
-    "body": "haha 12345 Caol Ila  Laphroaig  Clynelish "
+    "body": ""
     }, {
     "id": 6,
     "url": "/",
