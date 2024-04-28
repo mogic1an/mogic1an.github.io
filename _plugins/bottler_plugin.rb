@@ -16,7 +16,8 @@ module BottlerPlugin
       #grouped_data.each do |bottler, posts|
       site.data["bottlers"].each do |bottler|
         # INFO: consider add other posts with the distillery in tag in here
-        site.pages << BottlerPage.new(site, bottler, grouped_posts[bottler], grouped_notes[bottler])
+        site.pages << BottlerPage.new(site, bottler, Array(grouped_posts[bottler]), 
+                                      Array(grouped_notes[bottler]))
       end
     end
   end

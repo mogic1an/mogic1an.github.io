@@ -7,17 +7,22 @@ module DistilleryPlugin
     safe true
 
     def generate(site)
-      grouped_posts = Hash[site.posts.docs.group_by{|post| post['distillery']}]
-      grouped_notes = Hash[site.collections['notes'].docs.group_by{|post| post['distillery']}]
+      grouped_posts = Hash[site.posts.docs.flat_map { |post| Array(post["distillery"])
+        &.map { |distillery| [distillery, post] } }.group_by(&:first)]
+      grouped_notes = Hash[site.collections['notes'].docs.flat_map { |post| Array(post["distillery"])
+        &.map { |distillery| [distillery, post] } }.group_by(&:first)]
       site.data["distilleries"].each do |distillery|
-          site.pages << DistilleryPage.new(site, distillery, grouped_posts[distillery], grouped_notes[distillery])
+          site.pages << DistilleryPage.new(site, distillery, Array(grouped_posts[distillery]), 
+                                           Array(grouped_notes[distillery]))
       end
     end
   end
 
   # Subclass of `Jekyll::Page` with custom method definitions.
   class DistilleryPage < Jekyll::Page
-    def initialize(site, distillery, posts, notes)
+    def initialize(site, distillery, post_pairs, note_pairs)
+      posts = post_pairs.map {|bottler, post| post}
+      notes = note_pairs.map {|bottler, post| post}
       @site = site             # the current site instance.
       @base = site.source      # path to the source directory.
       @dir  = slugify(distillery) # the directory the page will reside in.
