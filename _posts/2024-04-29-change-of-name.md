@@ -7,6 +7,7 @@ categories:
   - whisky
   - scotch
 aliases: 
+featured: true
 distillery: 
   - Cardhu
 date: 2024-04-29
