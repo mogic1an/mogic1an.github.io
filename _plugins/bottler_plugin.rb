@@ -29,6 +29,7 @@ module BottlerPlugin
       @site = site             # the current site instance.
       @base = site.source      # path to the source directory.
       @dir  = bottler # the directory the page will reside in.
+      @path = bottler
 
       # All pages have the same filename, so define attributes straight away.
       @basename = 'index' # filename without the extension.
