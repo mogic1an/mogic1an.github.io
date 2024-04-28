@@ -1,3 +1,0 @@
----
-bottler: AMOY
----
