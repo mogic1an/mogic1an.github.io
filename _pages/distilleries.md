@@ -1,6 +1,5 @@
 ---
-layout: default
+layout: distilleries
 title: Distilleries
 permalink: /distillery
 ---
-haha

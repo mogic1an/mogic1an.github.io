@@ -3,21 +3,29 @@ module BottlerPlugin
     safe true
 
     def generate(site)
-      grouped_data = site.posts.docs
-        .flat_map { |post| post["bottler"]&.map { |bottler| [bottler, post] } }
-        .group_by(&:first)
-        .transform_values { |values| values.map(&:last) }
+      grouped_posts = Hash[site.posts.docs.flat_map { |post| Array(post["bottler"])
+        &.map { |bottler| [bottler, post] } }.group_by(&:first)]
+      grouped_notes = Hash[site.collections['notes'].docs.flat_map { |post| Array(post["bottler"])
+        &.map { |bottler| [bottler, post] } }.group_by(&:first)]
+
+      #grouped_data = (site.posts.docs + site.collections['bottler_infos'].docs + site.collections['notes'].docs)
+      #  .flat_map { |post| Array(post["bottler"])&.map { |bottler| [bottler, post] } }
+      #  .group_by(&:first)
+      #  .transform_values { |values| values.map(&:last) }
       # group by
-      grouped_data.each do |bottler, posts|
+      #grouped_data.each do |bottler, posts|
+      site.data["bottlers"].each do |bottler|
         # INFO: consider add other posts with the distillery in tag in here
-        site.pages << BottlerPage.new(site, bottler, posts)
+        site.pages << BottlerPage.new(site, bottler, grouped_posts[bottler], grouped_notes[bottler])
       end
     end
   end
 
   # Subclass of `Jekyll::Page` with custom method definitions.
   class BottlerPage < Jekyll::Page
-    def initialize(site, bottler, posts)
+    def initialize(site, bottler, post_pairs, note_pairs)
+      posts = post_pairs.map {|bottler, post| post}
+      notes = note_pairs.map {|bottler, note| note}
       @site = site             # the current site instance.
       @base = site.source      # path to the source directory.
       @dir  = bottler # the directory the page will reside in.
@@ -30,7 +38,9 @@ module BottlerPlugin
       # Initialize data hash with a key pointing to all posts under current category.
       # This allows accessing the list in a template via `page.linked_docs`.
       @data = {
-        'linked_docs' => posts
+        'title' => bottler,
+        'related_posts' => posts,
+        'related_notes' => notes
       }
 
       # Look up front matter defaults scoped to type `categories`, if given key

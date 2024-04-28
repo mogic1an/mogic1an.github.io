@@ -3,7 +3,7 @@ layout: default
 ---
 {% include get_liquor_type.html %}
 
-{% if page.url == "/" or page.url == "/br" or page.url == "/ag" or page.url == "/wh" %}
+{% if page.url == "/" %}
 
 <!-- Featured
 ================================================== -->
@@ -28,13 +28,16 @@ layout: default
 
 {% endif %}
 
+
 <!-- Posts Index
 ================================================== -->
+{% if page.url == "/blog" %}
+
 <section class="recent-posts">
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2><span>All Blogs</span></h2>
 
     </div>
 
@@ -45,6 +48,29 @@ layout: default
     </div>
 
 </section>
+
+{% endif %}
+
+{% if page.url == "/note" %}
+
+<section class="recent-posts">
+
+    <div class="section-title">
+
+        <h2><span>All Notes</span></h2>
+
+    </div>
+
+    <div class="row listrecent">
+        {% for post in site.notes %}
+            {% include postbox.html %}
+        {% endfor %}
+    </div>
+
+</section>
+
+{% endif %}
+
 
 <!-- Pagination
 ================================================== -->

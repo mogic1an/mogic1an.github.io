@@ -1,25 +1,26 @@
+def slugify(str)
+  return str.downcase.strip.gsub(' ', '_').gsub(/[^\w-]/, '')
+end
+
 module DistilleryPlugin
   class DistilleryPageGenerator < Jekyll::Generator
     safe true
 
     def generate(site)
-      # group by
-      #site["distillery_infos"].each do |post|
-      #  Jekyll.logger.warn "Expected a hash but got #{post.title}"
-      #end
-      site.posts.docs.group_by{|post| post['distillery']}.each do |distillery, posts|
-        # INFO: consider add other posts with the distillery in tag in here
-        site.pages << DistilleryPage.new(site, distillery, posts)
+      grouped_posts = Hash[site.posts.docs.group_by{|post| post['distillery']}]
+      grouped_notes = Hash[site.collections['notes'].docs.group_by{|post| post['distillery']}]
+      site.data["distilleries"].each do |distillery|
+          site.pages << DistilleryPage.new(site, distillery, grouped_posts[distillery], grouped_notes[distillery])
       end
     end
   end
 
   # Subclass of `Jekyll::Page` with custom method definitions.
   class DistilleryPage < Jekyll::Page
-    def initialize(site, distillery, posts)
+    def initialize(site, distillery, posts, notes)
       @site = site             # the current site instance.
       @base = site.source      # path to the source directory.
-      @dir  = distillery # the directory the page will reside in.
+      @dir  = slugify(distillery) # the directory the page will reside in.
 
       # All pages have the same filename, so define attributes straight away.
       @basename = 'index' # filename without the extension.
@@ -29,7 +30,9 @@ module DistilleryPlugin
       # Initialize data hash with a key pointing to all posts under current category.
       # This allows accessing the list in a template via `page.linked_docs`.
       @data = {
-        'linked_docs' => posts
+        'title' => distillery,
+        'related_posts' => posts,
+        'related_notes' => notes
       }
 
       # Look up front matter defaults scoped to type `categories`, if given key

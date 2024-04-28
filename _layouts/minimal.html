@@ -84,28 +84,54 @@
                                     window.location.href = "{{ site.url }}" + selectedOption;
                                 }
                             </script-->
+                            {% assign urlfirst = page.url | split: '/' | slice: 1 | first %}
 
-                            {% if page.url == "/" %}
-                            <li class="nav-item active">
-                                {% else %}
+                            {% if page.url == '/' %}
+                                <li class="nav-item active">
+                            {% else %}
                                 <li class="nav-item">
-                                    {% endif %}
-                                    <a class="nav-link" href="{{ site.baseurl }}/index.html">Note</a>
+                            {% endif %}
+                                <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
+                            </li>
+
+                            {% if urlfirst == "note" %}
+                                <li class="nav-item active">
+                            {% else %}
+                                <li class="nav-item">
+                            {% endif %}
+                                    <a class="nav-link" href="{{ site.baseurl }}/note">Note</a>
                                 </li>
 
+                            {% if urlfirst == "blog" %}
+                                <li class="nav-item active">
+                            {% else %}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ site.baseurl }}/about">Blog</a>
+                            {% endif %}
+
+                                    <a class="nav-link" href="{{ site.baseurl }}/blog">Blog</a>
                                 </li>
 
+                                {% if urlfirst == "distillery" %}
+                                <li class="nav-item active">
+                            {% else %}
                                 <li class="nav-item">
+                            {% endif %}
                                     <a class="nav-link" href="{{ site.baseurl }}/distillery">Distillery</a>
                                 </li>
 
+                                {% if urlfirst == "bottler" %}
+                                <li class="nav-item active">
+                            {% else %}
                                 <li class="nav-item">
+                            {% endif %}
                                     <a class="nav-link" href="{{ site.baseurl }}/bottler">Bottler</a>
                                 </li>
 
+                                {% if urlfirst == "about" %}
+                                <li class="nav-item active">
+                            {% else %}
                                 <li class="nav-item">
+                            {% endif %}
                                     <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                                 </li>
 

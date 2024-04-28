@@ -1,0 +1,18 @@
+---
+title: "Bottlers"
+layout: titleless
+permalink: "/bottler.html"
+---
+
+<div class="mainheading">
+    <h1 class="sitetitle">Bottlers</h1>
+</div>
+
+<div class="row listrecent">
+    {% for bottler in site.data.bottlers %}
+        {% assign info = site.data.bottler_infos[bottler] %}
+        {% assign title = info['bottler'] %}
+        {% include infobox.html %}
+    {% endfor %}
+
+</div>
