@@ -4,6 +4,7 @@ title:  "苏格兰威士忌名称变化迷思"
 author: tony
 image: assets/images/name_change_1.png
 categories:
+  - 威士忌
   - whisky
   - scotch
 aliases: 
