@@ -41,28 +41,28 @@ var documents = [{
     "body": ""
     }, {
     "id": 8,
-    "url": "/distillery/Caol%20Ila/",
-    "title": "",
+    "url": "/distillery/caol_ila/",
+    "title": "Caol Ila",
     "body": ""
     }, {
     "id": 9,
-    "url": "/distillery/Laphroaig/",
-    "title": "",
+    "url": "/distillery/clynelish/",
+    "title": "Clynelish",
     "body": ""
     }, {
     "id": 10,
-    "url": "/distillery/Clynelish/",
-    "title": "",
+    "url": "/distillery/laphroaig/",
+    "title": "Laphroaig",
     "body": ""
     }, {
     "id": 11,
-    "url": "/bottler/GM/",
-    "title": "",
+    "url": "/bottler/AMOY/",
+    "title": "AMOY",
     "body": ""
     }, {
     "id": 12,
-    "url": "/bottler/AMOY/",
-    "title": "",
+    "url": "/bottler/GM/",
+    "title": "GM",
     "body": ""
     }, {
     "id": 13,
@@ -71,22 +71,22 @@ var documents = [{
     "body": "      Sitemap: {{ “sitemap. xml”   absolute_url }}   "
     }, {
     "id": 14,
-    "url": "/posts/whisky/",
+    "url": "/blog/whisky/",
     "title": "Laphroaig",
     "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }, {
     "id": 15,
-    "url": "/posts/lala/",
+    "url": "/blog/lala/",
     "title": "testflight",
     "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }, {
     "id": 16,
-    "url": "/posts/brandy/",
+    "url": "/blog/brandy/",
     "title": "Caol Ila",
     "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }, {
     "id": 17,
-    "url": "/posts/agave/",
+    "url": "/blog/agave/",
     "title": "Caol Ila 2",
     "body": "2024/03/14 - Nose: bacon, bean paste, some charcoal, some maritime flavor, a bit medicinal flavor, some citrus Taste: Medicinal, beans, seaweed, some lemon, a bit of malty sweetness, yellow fruity notes Finish: Some bean paste, charcoal, some seaweed, brown sugar "
     }];
