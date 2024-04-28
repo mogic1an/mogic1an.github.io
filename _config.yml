@@ -9,14 +9,14 @@ google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
-permalink: /:title/
+permalink: blog/:title/
 destination: docs/
 
 # Authors
 authors:
   tony:
     name: Tony
-    display_name: Tony
+    display_name: 小白
     avatar: 'assets/images/avatar.png'
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: wowthemesnet@gmail.com
@@ -27,6 +27,11 @@ authors:
 
 # Collections
 collections:
+  notes:
+    defaults:
+      layout: post
+    output: true
+    permalink: note/:path/
   distillery_infos:
     defaults:
       layout: post
@@ -48,7 +53,7 @@ defaults:
   - scope:
       type: bottlers 
     values:
-      layout: distillery
+      layout: bottler
       permalink: bottler/:path/
 
 
@@ -64,13 +69,9 @@ plugins:
 jekyll-archives:
   enabled:
     - categories
-    - bottler
-    - distillery
   layout: archive
   permalinks:
     category: '/category/:name/'
-    bottler: '/bottler/:name/'
-    distillery: '/distillery/:name/'
     
 # Pagination 
 paginate: 6
@@ -94,4 +95,4 @@ adsense-data-ad-slot: "1363087678"
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, vendor]
