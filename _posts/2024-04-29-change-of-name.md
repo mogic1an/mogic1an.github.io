@@ -2,7 +2,7 @@
 layout: post
 title:  "苏格兰威士忌名称变化迷思"
 author: tony
-image: assets/images/2.jpg
+image: assets/images/name_change_1.png
 categories:
   - whisky
   - scotch
@@ -26,6 +26,9 @@ date: 2024-04-29
 # PART2：当今情况
 swa2009年出台的规定，把苏格兰威士忌严格分为了以下几类：
 
+![excerpt 1]({{ site.baseurl }}/assets/images/name_change_2.png)
+![excerpt 2]({{ site.baseurl }}/assets/images/name_change_3.png)
+
 
 单一麦芽苏格兰威士忌（Single Malt Scotch Whisky）：只能在一个蒸馏厂，只用水和发芽大麦，不添加其它任何谷物，而且必须使用铜制壶式蒸馏器对酒精进行蒸馏后，以700公升（150英制加仑、180美制加仑）为一个单位，装入橡木桶当中陈酿至少三年以上之后，才可以被称为单一麦芽苏格兰威士忌。
 
@@ -41,9 +44,7 @@ __解读：很多人看到名字后的第一反应会是，单一谷物威士忌
 __解读： swa明确规定，为了避免出现歧义，自规定出台后，禁止使用pure malt（纯麦）的标识。其实在2009年规定出台前，威士忌作为普通的农产品，命名的随意也是可以理解的。__
 
 
-
-
-
+![pure_malt_banned]({{ site.baseurl }}/assets/images/name_change_4.png)
 (swa的法规中明确禁用pure malt即纯麦的字样)
 
       
