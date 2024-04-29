@@ -60,7 +60,6 @@
                     <div class="collapse navbar-collapse" id="navbarMediumish">
 
                         <!-- Begin Menu -->
-                        Whisky Animal
                         <!--div class="dropdown">
                             <button class="dropbtn">{{ liquor_type }}</button>
                             <div class="dropdown-content">
@@ -91,7 +90,7 @@
                             {% else %}
                                 <li class="nav-item">
                             {% endif %}
-                                <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
+                                <a class="nav-link" href="{{ site.baseurl }}/">首页</a>
                             </li>
 
                             {% if urlfirst == "note" %}
@@ -99,7 +98,7 @@
                             {% else %}
                                 <li class="nav-item">
                             {% endif %}
-                                    <a class="nav-link" href="{{ site.baseurl }}/note">Note</a>
+                                    <a class="nav-link" href="{{ site.baseurl }}/note">酒评</a>
                                 </li>
 
                             {% if urlfirst == "blog" %}
@@ -107,8 +106,7 @@
                             {% else %}
                                 <li class="nav-item">
                             {% endif %}
-
-                                    <a class="nav-link" href="{{ site.baseurl }}/blog">Blog</a>
+                                    <a class="nav-link" href="{{ site.baseurl }}/blog">学习笔记</a>
                                 </li>
 
                                 {% if urlfirst == "distillery" %}
@@ -116,7 +114,7 @@
                             {% else %}
                                 <li class="nav-item">
                             {% endif %}
-                                    <a class="nav-link" href="{{ site.baseurl }}/distillery">Distillery</a>
+                                    <a class="nav-link" href="{{ site.baseurl }}/distillery">酒厂</a>
                                 </li>
 
                                 {% if urlfirst == "bottler" %}
@@ -124,7 +122,7 @@
                             {% else %}
                                 <li class="nav-item">
                             {% endif %}
-                                    <a class="nav-link" href="{{ site.baseurl }}/bottler">Bottler</a>
+                                    <a class="nav-link" href="{{ site.baseurl }}/bottler">装瓶商</a>
                                 </li>
 
                                 {% if urlfirst == "about" %}
@@ -132,7 +130,7 @@
                             {% else %}
                                 <li class="nav-item">
                             {% endif %}
-                                    <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
+                                    <a class="nav-link" href="{{ site.baseurl }}/about">关于</a>
                                 </li>
 
                                 {% include search-lunr.html %}
@@ -182,19 +180,19 @@
                             <div class="d-md-flex h-100">
                                 <div class="col-md-4 transpdark align-self-center text-center h-100">
                                     <div class="d-md-flex align-items-center justify-content-center h-100">
-                                        <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+                                        <h2 class="d-md-block align-self-center py-1 font-weight-light">探索更多<span class="d-none d-md-inline">→</span></h2>
                                     </div>
                                 </div>
                                 <div class="col-md-8 p-5 align-self-center text-center">
-                                    {% assign categories_list = site.categories %}
+                                    {% assign categories_list = site.data.all_categories %}
                                     {% if categories_list.first[0] == null %}
-                                    {% for category in categories_list %}
-                                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
-                                    {% endfor %}
+                                        {% for category in categories_list %}
+                                            <a class="mt-1 mb-1" href="{{site.baseurl}}/category/{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                                        {% endfor %}
                                     {% else %}
-                                    {% for category in categories_list %}
-                                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
-                                    {% endfor %}
+                                        {% for category in categories_list %}
+                                            <a class="mt-1 mb-1" href="{{site.baseurl}}/category/{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                                        {% endfor %}
                                     {% endif %}
                                     {% assign categories_list = nil %}
                                 </div>

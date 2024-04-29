@@ -34,4 +34,11 @@ Jekyll::Hooks.register :site, :post_read do |site|
   end
   site.data["bottlers"] = bottlers
   site.data["bottler_infos"] = bottler_infos
+
+
+  hash = Hash.new { |h, key| h[key] = [] }
+  (site.collections['notes'].docs + site.posts.docs).each do |p|
+    p.data["categories"]&.each { |t| hash[t] << p }
+  end
+  site.data["all_categories"] = hash
 end

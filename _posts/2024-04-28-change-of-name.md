@@ -1,12 +1,10 @@
 ---
 layout: post
 title:  "苏格兰威士忌名称变化迷思"
-author: tony
+author: brian
 image: assets/images/name_change_0.png
 categories:
-  - 威士忌
-  - whisky
-  - scotch
+  - 苏威
 aliases: 
 featured: true
 distillery: 

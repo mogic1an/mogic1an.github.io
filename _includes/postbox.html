@@ -7,7 +7,8 @@
             <center>
             <a href="{{ site.baseurl }}{{ post.url }}">
                 {% if post.image %}
-                    {% if page.url == "/note" %}
+                    {% assign type = post.url | split: '/' | slice: 1 | first %}
+                    {% if type == "note" %}
                         {% assign imgclass = "img-fluid-whole" %}
                     {% else %}
                         {% assign imgclass = "img-fluid" %}
@@ -44,7 +45,7 @@
                 {% endif %}
                 </span>
                 <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a></span><br/>
+                <span class="post-name">{{ author.display_name }}</span><br/>
                 {% endif %}
                 <span class="post-date">{{ post.date | date_to_string }}</span>
                 </span>

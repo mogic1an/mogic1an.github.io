@@ -14,7 +14,11 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
-    gem 'jekyll-archives'
+    #gem 'jekyll-archives'
+    gem "jekyll-archives", git: "https://github.com/positron96/jekyll-archives.git", ref: "ed7e67a"
     gem 'kramdown'
     gem 'rouge'
 end
+#group :jekyll_plugins do
+#  gem "jekyll-archives", git: "https://github.com/positron96/jekyll-archives.git", ref: "ed7e67a"
+#end

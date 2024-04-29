@@ -4,8 +4,7 @@ title:  "小猫14年基础款"
 author: tony
 image: https://static.whiskybase.com/storage/whiskies/1/9/2611/337410-big.jpg
 categories:
-  - whisky
-  - scotch
+  - 高地
 aliases: 
 distillery: Clynelish
 age: 14

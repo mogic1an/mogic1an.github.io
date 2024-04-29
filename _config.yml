@@ -1,7 +1,7 @@
 # Site
-name: "Joy of Whisky"
-title: "Joy of Whisky"
-description: "A small whisky note site"
+name: "Whisky Young"
+title: "Whisky Young"
+description: "一个普通的威士忌小网站"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 #baseurl: ''
@@ -18,17 +18,22 @@ authors:
   tony:
     name: Tony
     display_name: 小白
+    avatar: 'assets/images/tony.jpg'
+    email: haow0628@gmail.com
+    description: "摆烂计算机在读，威士忌小白，搞笑贝斯手"
+  brian:
+    name: Brian
+    display_name: Brian
     avatar: 'assets/images/avatar.png'
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "M0g1c1an"
+    email: chusheng@gmail.com
+    description: "出生"
+
 
 
 # Collections
 collections:
   notes:
+    archive: true
     defaults:
       layout: post
     output: true
