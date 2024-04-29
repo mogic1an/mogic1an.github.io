@@ -18,6 +18,7 @@ group :jekyll_plugins do
     gem "jekyll-archives", git: "https://github.com/positron96/jekyll-archives.git", ref: "ed7e67a"
     gem 'kramdown'
     gem 'rouge'
+    gem 'loofah'
 end
 #group :jekyll_plugins do
 #  gem "jekyll-archives", git: "https://github.com/positron96/jekyll-archives.git", ref: "ed7e67a"

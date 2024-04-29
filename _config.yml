@@ -4,7 +4,7 @@ title: "Whisky Young"
 description: "一个普通的威士忌小网站"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-#baseurl: ''
+baseurl: ''
 url: 'https://mogic1an.github.io'
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
@@ -101,4 +101,5 @@ adsense-data-ad-slot: "1363087678"
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, vendor]
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, vendor, 
+  gen_index.js, doc.json] # for static search
