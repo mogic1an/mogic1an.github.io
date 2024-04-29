@@ -13,3 +13,6 @@ cat index.json >> assets/js/index.js
 echo "" >> assets/js/index.js
 echo -n "documents = " >> assets/js/index.js
 cat doc.json >> assets/js/index.js
+git add assets/js/index.js
+git commit -m 'add index.js'
+git push
