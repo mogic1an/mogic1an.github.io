@@ -30,7 +30,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
 
   bottler_infos = Hash[site.collections['bottler_infos'].docs.collect {|doc| [doc["bottler"], doc]}]
   bottlers.each do |bottler|
-    raise "Missing distillery info for #{bottler}" unless bottler_infos.key?(bottler)
+    raise "Missing bottler info for #{bottler}" unless bottler_infos.key?(bottler)
   end
   site.data["bottlers"] = bottlers
   site.data["bottler_infos"] = bottler_infos
