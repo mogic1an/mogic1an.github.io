@@ -890,6 +890,12 @@ iframe {
     width: 100%;
 }
 
+.img-fluid-whole {
+    position: relative;
+    width: 100%;
+    top: -345px
+}
+
 .sticky-top-80 {
     top: 80px;
 }
