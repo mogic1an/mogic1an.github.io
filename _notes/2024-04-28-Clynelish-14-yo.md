@@ -11,8 +11,8 @@ age: 14
 bottler:
   - OB
 serie: Core Range
-Strength: 46
-Cask Type:
+strength: 46
+cask_type:
   - Bourbon
 score: 83
 nose: 83
@@ -20,7 +20,8 @@ taste: 83
 finish: 82
 price/ml: 0.6
 date: 2024-03-14
-WB: https://www.whiskybase.com/whiskies/whisky/192611/clynelish-14-year-old
+wb: https://www.whiskybase.com/whiskies/whisky/192611/clynelish-14-year-old
+margin: -380px
 ---
 
 ## 闻香

@@ -10,13 +10,15 @@
                     {% assign type = post.url | split: '/' | slice: 1 | first %}
                     {% if type == "note" %}
                         {% assign imgclass = "img-fluid-whole" %}
+                        {% assign margin = post.margin %}
                     {% else %}
                         {% assign imgclass = "img-fluid" %}
+                        {% assign margin = "0px"%}
                     {% endif %}
                     {% if site.lazyimages == "enabled" %}
-                        <img class="{{imgclass}} lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+                    <img class="{{imgclass}} lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}" style="top:{{margin}}">
                     {% else %}
-                        <img class="{{imgclass}}" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}"> 
+                    <img class="{{imgclass}}" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}" style="top:{{margin}}"> 
                     {% endif %}
 
                 {% endif %}
