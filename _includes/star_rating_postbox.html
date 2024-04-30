@@ -1,5 +1,27 @@
+{% assign raw_score = include.score %}
+{% if raw_score >= 92 %}
+    {% assign score = 5 %}
+{% elsif raw_score >= 90.3 %}
+    {% assign score = 4.5 %}
+{% elsif raw_score >= 88.6 %}
+    {% assign score = 4 %}
+{% elsif raw_score >= 87.3 %}
+    {% assign score = 3.5 %}
+{% elsif raw_score >= 85 %}
+    {% assign score = 3 %}
+{% elsif raw_score >= 82.3 %}
+    {% assign score = 2.5 %}
+{% elsif raw_score >= 80 %}
+    {% assign score = 2 %}
+{% elsif raw_score >= 70 %}
+    {% assign score = 1 %}
+{% else %}
+    {% assign score = 0 %}
+{% endif %}
+
+
 <div class="rating-holder">
-    <div class="c-rating c-rating--regular" data-rating-value="{{ include.score | divided_by: 20}}">
+    <div class="c-rating c-rating--regular" data-rating-value="{{ score }}">
   <button>1</button>
   <button>2</button>
   <button>3</button>
