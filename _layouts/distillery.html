@@ -25,7 +25,8 @@ post_class: post-template
         </div>
 
         <div class="row listrecent">
-            {% for post in page.related_posts %}
+            {% assign posts = page.related_posts | sort: "date" | reverse %}
+            {% for post in posts %}
                 {% include postbox.html %}
             {% endfor %}
         </div>
@@ -39,7 +40,8 @@ post_class: post-template
         </div>
 
         <div class="row listrecent">
-            {% for post in page.related_notes %}
+            {% assign posts = page.related_notes | sort: "date" | reverse %}
+            {% for post in posts %}
                 {% include postbox.html %}
             {% endfor %}
         </div>

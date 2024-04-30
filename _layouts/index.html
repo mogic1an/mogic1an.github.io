@@ -42,7 +42,8 @@ layout: default
     </div>
 
     <div class="row listrecent">
-        {% for post in site.posts %}
+        {% assign posts = site.posts | sort: "date" | reverse %}
+        {% for post in posts %}
             {% include postbox.html %}
         {% endfor %}
     </div>
@@ -62,7 +63,8 @@ layout: default
     </div>
 
     <div class="row listrecent">
-        {% for post in site.notes %}
+        {% assign posts = site.notes | sort: "date" | reverse %}
+        {% for post in posts %}
             {% include postbox.html %}
         {% endfor %}
     </div>
