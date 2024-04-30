@@ -15,6 +15,9 @@ Jekyll::Hooks.register :site, :post_read do |site|
   site.collections['bottler_infos'].docs.each do |doc|
     doc.data["title"] = doc.data["full_name"]
   end
+  (site.collections['bottler_infos'].docs + site.collections['distillery_infos'].docs).each do |doc|
+     doc.data["layout"] = "info"
+  end
 
   distilleries = ((site.posts.docs + site.collections['distillery_infos'].docs + site.collections['notes'].docs)
     .map { |doc| Array(doc["distillery"]) }.flatten | []).sort

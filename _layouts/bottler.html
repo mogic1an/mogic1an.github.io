@@ -11,9 +11,9 @@ post_class: post-template
     <h1 class="sitetitle"> {{ info.full_name }} </h1>
     <p>
         {{info.chinese}}({{ page.title }})
-        {% assign excerpt = site.data.bottler_infos[page.title].content | strip_html | truncate: 5 | strip_newlines %}
+        {% assign excerpt = site.data.bottler_infos[page.title].content | strip_html | truncate: 50 | strip_newlines %}
         {% if excerpt != "" %}
-            - {{ excerpt }} <a class="text-green" href="{{site.data.bottler_infos[page.title].url}}">更多...</a>
+            - {{ excerpt }} <a class="text-green" href="{{site.data.bottler_infos[page.title].url}}">更多</a>
         {% endif %}
     </p>
 </div>
@@ -22,7 +22,7 @@ post_class: post-template
 
     {% if page.related_posts.size > 0%}
         <div class="section-title">
-            <h2><span>Blogs</span></h2>
+            <h2><span>笔记</span></h2>
         </div>
 
         <div class="row listrecent">
@@ -36,7 +36,7 @@ post_class: post-template
     {% if page.related_notes.size > 0 %}
         <div class="section-title">
 
-            <h2><span>Notes</span></h2>
+            <h2><span>酒评</span></h2>
 
         </div>
 
