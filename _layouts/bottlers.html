@@ -11,7 +11,7 @@ permalink: "/bottler.html"
 <div class="row listrecent">
     {% for bottler in site.data.bottlers %}
         {% assign info = site.data.bottler_infos[bottler] %}
-        {% assign title = info['bottler'] %}
+        {% assign title = info['title'] %}
         {% include infobox.html %}
     {% endfor %}
 

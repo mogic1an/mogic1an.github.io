@@ -1,4 +1,0 @@
----
-distillery: Laphroaig
-region: Islay
----
