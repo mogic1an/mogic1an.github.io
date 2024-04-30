@@ -104,12 +104,9 @@ post_class: post-template
             {% if page.distillery %}
             <div class="after-post-cats">
                 <ul class="tags mb-4">
-                    {% assign sortedCategories = page.distillery | sort %}
-                    {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }}</a>
+                        <a class="smoothscroll" href="{{site.url}}/distillery/{{ page.distillery | slugify }}">{{ page.distillery }}</a>
                     </li>
-                    {% endfor %}
                 </ul>
             </div>
             {% endif %}
@@ -117,12 +114,9 @@ post_class: post-template
             {% if page.bottler %}
             <div class="after-post-cats">
                 <ul class="tags mb-4">
-                    {% assign sortedCategories = page.bottler | sort %}
-                    {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.url}}/bottler/{{ category }}">{{ category }}</a>
+                        <a class="smoothscroll" href="{{site.url}}/bottler/{{ page.bottler | slugify }}">{{ page.bottler }}</a>
                     </li>
-                    {% endfor %}
                 </ul>
             </div>
             {% endif %}

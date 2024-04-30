@@ -17,16 +17,16 @@ destination: _site/
 authors:
   tony:
     name: Tony
-    display_name: 小白
+    display_name: Tony
     avatar: 'assets/images/tony.jpg'
     email: haow0628@gmail.com
-    description: "摆烂计算机在读，威士忌小白，搞笑贝斯手"
+    description: "摆烂计算机在读，威士忌小白，搞笑贝斯手。"
   brian:
     name: Brian
     display_name: Brian
-    avatar: 'assets/images/avatar.png'
-    email: chusheng@gmail.com
-    description: "出生"
+    avatar: 'assets/images/brian.jpg'
+    email: gy1693136575@163.com
+    description: "英专在读，威士忌爱好者。喜欢恐怖海峡和金汤力。"
 
 
 
@@ -40,12 +40,12 @@ collections:
     permalink: note/:path/
   distillery_infos:
     defaults:
-      layout: post
+      layout: info
     output: true
     permalink: distillery/:path/details.html
   bottler_infos:
     defaults:
-      layout: post
+      layout: info
     output: true
     permalink: bottler/:path/details.html
 
