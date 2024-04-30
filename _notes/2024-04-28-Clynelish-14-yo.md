@@ -19,7 +19,6 @@ nose: 83
 taste: 83
 finish: 82
 price/ml: 0.6
-date: 2024-03-14
 wb: https://www.whiskybase.com/whiskies/whisky/192611/clynelish-14-year-old
 margin: -380px
 ---
