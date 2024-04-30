@@ -13,7 +13,8 @@ layout: default
     </div>
     <div class="row">
 
-    {% for post in site.posts %}
+    {% assign posts = site.posts | concat: site.distillery_infos | concat: site.notes | concat: site.bottler_infos %}
+    {% for post in posts %}
 
         {% if post.featured == true %}
 
