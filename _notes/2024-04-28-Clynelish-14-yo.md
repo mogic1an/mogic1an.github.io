@@ -21,6 +21,7 @@ finish: 82
 price/ml: 0.6
 wb: https://www.whiskybase.com/whiskies/whisky/192611/clynelish-14-year-old
 margin: -380px
+date: 2024-04-28 +0800
 ---
 
 ## 闻香
