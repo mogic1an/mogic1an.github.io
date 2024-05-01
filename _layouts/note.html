@@ -54,17 +54,49 @@ post_class: post-template
             <!-- Post Featured Image -->
             {% if page.image %}
 
+            <center>
             {% if site.lazyimages == "enabled" %}
             <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
             {% else %}
             <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
             {% endif %}
+            </center>
 
             {% endif %}
             <!-- End Featured Image -->
 
             <!-- Post Content -->
             <div class="article-post">
+                <span>
+                {% if page.distillery %}
+                    {% assign distillery = page.distillery | first %}
+                    <strong>酒厂:</strong> &nbsp;{{site.data.distillery_infos[distillery].chinese}}<br/>
+                {% endif %}
+                {% if page.vintage %}
+                    <strong>蒸馏年份:</strong> &nbsp;{{page.vintage}}<br/>
+                {% endif %}
+                {% if page.age %}
+                    <strong>酒龄:</strong> &nbsp;{{page.age}}<br/>
+                {% endif %}
+                {% if page.bottler and page.bottler.size > 0 %}
+                    {% assign bottler = page.bottler | first %}
+                    <strong>装瓶商:</strong> &nbsp;{% for bottler in page.bottler %}
+                     {{site.data.bottler_infos[bottler].chinese}}
+                     {% endfor %}<br/>
+                {% endif %}
+                {% if page.serie %}
+                    <strong>系列:</strong> &nbsp;{{page.serie}}<br/>
+                {% endif %}
+                {% if page.strength %}
+                    <strong>度数:</strong> &nbsp;{{page.strength}}%<br/>
+                {% endif %}
+                {% if page.cask_type and page.cask_type.size > 0 %}
+                    <strong>桶型:</strong> &nbsp;{% for cask_type in page.cask_type %}
+                     {{cask_type | cask_to_chinese}}
+                     {% endfor %}<br/>
+                {% endif %}
+                </span><br/>
+
                 <!-- Toc if any -->
                 {% if page.toc %}
                     {% if page.beforetoc %}
@@ -89,7 +121,7 @@ post_class: post-template
             <!-- Post Date -->
             <p>
             <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_chinese }}</time></span>           
                 {% if page.last_modified_at %}
                 (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
                 {% endif %}
@@ -99,6 +131,22 @@ post_class: post-template
             <!-- Post Categories -->
             <div class="after-post-cats">
                 <ul class="tags mb-4">
+                    <!-- distillery -->
+                    {% assign sortedCategories = page.distillery | sort %}
+                    {% for category in sortedCategories %}
+                    <li>
+                        <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }} - {{site.data.distillery_infos[category].chinese}}</a>
+                    </li>
+                    {% endfor %}
+
+                    <!-- bottler -->
+                    {% assign sortedCategories = page.bottler | sort %}
+                    {% for category in sortedCategories %}
+                    <li>
+                        <a class="smoothscroll" href="{{site.url}}/bottler/{{ category }}">{{ category }} - {{site.data.bottler_infos[category].chinese}}</a>
+                    </li>
+                    {% endfor %}
+
                     {% assign sortedCategories = page.categories | sort %}
                     {% for category in sortedCategories %}
                     <li>
@@ -125,10 +173,12 @@ post_class: post-template
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
             {% if page.previous.url %}
-            <a class="prev d-block col-md-6" href="{{ site.baseurl }}/{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
+                <a class="prev d-block col-md-6" href="{{ site.url }}/{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
+            {% else %}
+                <div class="prev d-block col-md-6"></div>
             {% endif %}
             {% if page.next.url %}
-            <a class="next d-block col-md-6 text-lg-right" href="{{ site.baseurl }}/{{page.next.url}}">{{page.next.title}} &raquo; </a>
+            <a class="next d-block col-md-6 text-lg-right" href="{{ site.url }}/{{page.next.url}}">{{page.next.title}} &raquo; </a>
             {% endif %}
             <div class="clearfix"></div>
             </div>

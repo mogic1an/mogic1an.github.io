@@ -2,6 +2,13 @@ distillery_regions = ["Highland", "Lowland", "Speyside", "Cambell Town", "Islay"
 
 # edit metadata
 Jekyll::Hooks.register :site, :post_read do |site|
+  while site.posts.docs.size > 0 && site.posts.docs.last.data["date"].to_time > Time.now
+    site.posts.docs.pop
+  end
+  while site.collections['notes'].docs.size > 0 && site.collections['notes'].docs.last.data["date"].to_time > Time.now
+    site.collections['notes'].docs.pop
+  end
+
   # first change all bottlers and distillers to array for better handling
   (site.posts.docs + site.collections['notes'].docs).each do |doc|
     doc.data["distillery"] = Array(doc["distillery"])

@@ -5,6 +5,8 @@ author: brian
 image: assets/images/name_change_0.png
 categories:
   - 苏威
+  - 法规
+  - 术语
 aliases: 
 featured: true
 distillery: 

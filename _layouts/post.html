@@ -101,35 +101,24 @@ post_class: post-template
             </p>
 
             <!-- Post Categories -->
-            {% if page.distillery %}
             <div class="after-post-cats">
                 <ul class="tags mb-4">
+                    <!-- distillery -->
                     {% assign sortedCategories = page.distillery | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }}</a>
+                        <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }} - {{site.data.distillery_infos[category].chinese}}</a>
                     </li>
                     {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
-            <!-- Post Categories -->
-            {% if page.bottler %}
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
+
+                    <!-- bottler -->
                     {% assign sortedCategories = page.bottler | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.url}}/bottler/{{ category }}">{{ category }}</a>
+                        <a class="smoothscroll" href="{{site.url}}/bottler/{{ category }}">{{ category }} - {{site.data.bottler_infos[category].chinese}}</a>
                     </li>
                     {% endfor %}
-                </ul>
-            </div>
-            {% endif %}
 
-            <!-- Post Categories -->
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
                     {% assign sortedCategories = page.categories | sort %}
                     {% for category in sortedCategories %}
                     <li>
@@ -158,6 +147,8 @@ post_class: post-template
             {% if page.previous.url %}
                 <a class="prev d-block col-md-6" href="{{site.url}}{{page.previous.url}}">
                 &laquo; {{page.previous.title}}</a>
+            {% else %}
+                <div class="prev d-block col-md-6"></div>
             {% endif %}
             {% if page.next.url %}
                 <a class="next d-block col-md-6 text-lg-right" href="{{site.url}}{{page.next.url}}">
