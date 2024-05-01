@@ -1,5 +1,5 @@
 def slugify(str)
-  return str.downcase.strip.gsub(' ', '_').gsub(/[^\w-]/, '')
+  return str.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
 end
 
 module DistilleryPlugin

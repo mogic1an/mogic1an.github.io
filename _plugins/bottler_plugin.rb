@@ -1,3 +1,7 @@
+def slugify(str)
+  return str.downcase.strip.gsub(' ', '-').gsub('.', '-').gsub(/[^\w-]/, '')
+end
+
 module BottlerPlugin
   class BottlerPageGenerator < Jekyll::Generator
     safe true
@@ -29,8 +33,8 @@ module BottlerPlugin
       notes = note_pairs.map {|bottler, note| note}
       @site = site             # the current site instance.
       @base = site.source      # path to the source directory.
-      @dir  = bottler # the directory the page will reside in.
-      @path = bottler
+      @dir  = slugify(bottler) # the directory the page will reside in.
+      @path = slugify(bottler)
 
       # All pages have the same filename, so define attributes straight away.
       @basename = 'index' # filename without the extension.

@@ -20,7 +20,15 @@ module Jekyll
       {
         "American Oak" => "美国橡木桶",
         "Bourbon" => "波本桶",
-        "Refill Bourbon Hogshead" => "重填波本猪头桶",
+        "Refill Bourbon Hogshead" => "再填波本猪头桶",
+        "Bourbon Hogshead" => "波本猪头桶",
+        "2nd Fill Barrel" => "第二次装填Barrel桶",
+        "1st Fill Bourbon Barrel" => "初填波本Barrel桶",
+        "4 Refill Hogheads" => "四个再填猪头桶",
+        "Hogshead" => "猪头桶",
+        "2 Hogsheads" => "两个猪头桶",
+        "Moscatel Finish" => "莫斯卡托桶收尾",
+
       }[cask]
     end
   end

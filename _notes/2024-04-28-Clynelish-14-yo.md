@@ -1,6 +1,6 @@
 ---
 layout: note
-title:  "小猫14年基础款"
+title:  "小猫 14年 基础款"
 author: tony
 image: https://static.whiskybase.com/storage/whiskies/1/9/2611/337410-big.jpg
 categories:
@@ -14,7 +14,7 @@ serie: Core Range
 strength: 46
 cask_type:
   - Bourbon
-score: 83
+score: 82.67
 nose: 83
 taste: 83
 finish: 82

@@ -2,11 +2,13 @@ distillery_regions = ["Highland", "Lowland", "Speyside", "Cambell Town", "Islay"
 
 # edit metadata
 Jekyll::Hooks.register :site, :post_read do |site|
-  while site.posts.docs.size > 0 && site.posts.docs.last.data["date"].to_time > Time.now
-    site.posts.docs.pop
-  end
-  while site.collections['notes'].docs.size > 0 && site.collections['notes'].docs.last.data["date"].to_time > Time.now
-    site.collections['notes'].docs.pop
+  if ! site.config["future"]
+    while site.posts.docs.size > 0 && site.posts.docs.last.data["date"].to_time > Time.now
+      site.posts.docs.pop
+    end
+    while site.collections['notes'].docs.size > 0 && site.collections['notes'].docs.last.data["date"].to_time > Time.now
+      site.collections['notes'].docs.pop
+    end
   end
 
   # first change all bottlers and distillers to array for better handling
@@ -51,10 +53,10 @@ Jekyll::Hooks.register :site, :post_read do |site|
   bottler_infos = Hash[site.collections['bottler_infos'].docs.collect {|doc| [doc["bottler"], doc]}]
   bottlers.each do |bottler|
     raise "Missing bottler info for #{bottler}" unless bottler_infos.key?(bottler)
-    raise "Missing full name for #{bottler}" \
-      unless bottler_infos[bottler].data.key?("full_name")
-    raise "Missing chinese name for #{bottler}" \
-      unless bottler_infos[bottler].data.key?("chinese")
+    #raise "Missing full name for #{bottler}" \
+    #  unless bottler_infos[bottler].data.key?("full_name")
+    #raise "Missing chinese name for #{bottler}" \
+    #  unless bottler_infos[bottler].data.key?("chinese")
   end
   site.data["bottlers"] = bottlers
   site.data["bottler_infos"] = bottler_infos

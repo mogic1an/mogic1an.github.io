@@ -8,6 +8,7 @@ post_class: post-template
 {% assign info = site.data.bottler_infos[page.title] %}
 
 <div class="mainheading">
+    {% if info.full_name %}
     <h1 class="sitetitle"> {{ info.full_name }} </h1>
     <p>
         {{info.chinese}}({{ page.title }})
@@ -16,6 +17,16 @@ post_class: post-template
             - {{ excerpt }} <a class="text-green" href="{{site.data.bottler_infos[page.title].url}}">更多</a>
         {% endif %}
     </p>
+    {% else %}
+    <h1 class="sitetitle"> {{ page.title }} </h1>
+    <p>
+        {{info.chinese}}
+        {% assign excerpt = site.data.bottler_infos[page.title].content | strip_html | truncate: 50 | strip_newlines %}
+        {% if excerpt != "" %}
+            - {{ excerpt }} <a class="text-green" href="{{site.data.bottler_infos[page.title].url}}">更多</a>
+        {% endif %}
+    </p>
+    {% endif %}
 </div>
 
 <section class="recent-posts">

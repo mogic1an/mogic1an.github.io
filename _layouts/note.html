@@ -56,9 +56,9 @@ post_class: post-template
 
             <center>
             {% if site.lazyimages == "enabled" %}
-            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+            <img class="featured-image img-fluid lazyimg" style="max-height:725px;max-width:500px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
             {% else %}
-            <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+            <img class="featured-image img-fluid" style="max-height:725px;max-width:500px;" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
             {% endif %}
             </center>
 
@@ -112,10 +112,13 @@ post_class: post-template
             </div>
 
             <!-- Rating -->
-            {% if page.rating %}
-            <div class="rating mb-4 d-flex align-items-center">
-                <strong class="mr-1">Rating:</strong> {% include star_rating.html %}
-            </div>
+            {% if page.score %}
+                {% include render_score.html name="Rating" score=page.score%}
+            {% endif %}
+            {% if page.nose and page.taste and page.finish %}
+                {% include render_score.html name="Nose" score=page.nose%}
+                {% include render_score.html name="Taste" score=page.taste%}
+                {% include render_score.html name="Finish" score=page.finish%}
             {% endif %}
 
             <!-- Post Date -->
@@ -135,7 +138,11 @@ post_class: post-template
                     {% assign sortedCategories = page.distillery | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }} - {{site.data.distillery_infos[category].chinese}}</a>
+                        {% if site.data.distillery_infos[category].chinese %}
+                            <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }} - {{site.data.distillery_infos[category].chinese}}</a>
+                        {% else %}
+                            <a class="smoothscroll" href="{{site.url}}/distillery/{{ category | slugify }}">{{ category }}</a>
+                        {% endif %}
                     </li>
                     {% endfor %}
 
@@ -143,7 +150,11 @@ post_class: post-template
                     {% assign sortedCategories = page.bottler | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.url}}/bottler/{{ category }}">{{ category }} - {{site.data.bottler_infos[category].chinese}}</a>
+                        {% if site.data.bottler_infos[category].chinese %}
+                            <a class="smoothscroll" href="{{site.url}}/bottler/{{ category | slugify }}">{{ category }} - {{site.data.bottler_infos[category].chinese}}</a>
+                        {% else %}
+                            <a class="smoothscroll" href="{{site.url}}/bottler/{{ category | slugify }}">{{ category }}</a>
+                        {% endif %}
                     </li>
                     {% endfor %}
 

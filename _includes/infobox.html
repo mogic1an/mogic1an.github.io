@@ -18,14 +18,24 @@
         </div>
         <div class="card-body">
             <h2 class="card-title">
-                <a class="text-dark" href="{{ site.baseurl }}{{ info.url | remove: 'details.html' }}">{{ title }}</a>
+                {% if info.full_name %}
+                    <a class="text-dark" href="{{ site.baseurl }}{{ info.url | remove: 'details.html' }}">{{ info.full_name }}</a>
+                {% else %}
+                    <a class="text-dark" href="{{ site.baseurl }}{{ info.url | remove: 'details.html' }}">{{ title }}</a>
+                {% endif %}
                 {% if info.score %}
-                <div class="mb-2 mt-2 font-weight-normal">
-                {% include star_rating_postbox.html score=info.score%}
-                </div>
+                    <div class="mb-2 mt-2 font-weight-normal">
+                    {% include star_rating_postbox.html score=info.score%}
+                    </div>
                 {% endif %}
             </h2>
-            <h4 class="card-text">{{info.chinese}}<br/>{{ info.excerpt | strip_html | truncate: 50 | truncatewords: 30 }}</h4>
+            {% if info.chinese %}
+                {% if info.full_name %}
+                    <h4 class="card-text">{{info.chinese}}({{title}})<br/>{{ info.excerpt | strip_html | truncate: 50 | truncatewords: 30 }}</h4>
+                {% endif %}
+            {% elsif info.full_name %}
+                    <h4 class="card-text">{{title}}<br/>{{ info.excerpt | strip_html | truncate: 50 | truncatewords: 30 }}</h4>
+            {% endif %}
         </div>
         <!--
         <div class="card-footer bg-white">
