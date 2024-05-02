@@ -19,11 +19,18 @@ module Jekyll
     def cask_to_chinese(cask)
       {
         "American Oak" => "美国橡木桶",
+        "Rivesaltes" => "Rivesaltes甜红酒桶",
         "Bourbon" => "波本桶",
+        "Oloroso" => "Oloroso雪莉桶",
+        "PX" => "PX雪莉桶",
+        "Refill Butt" => "再填Butt桶",
+        "Refill Hogshead" => "再填猪头桶",
         "Refill Bourbon Hogshead" => "再填波本猪头桶",
+        "Refill American Oak Hogshead" => "再填美国橡木猪头桶",
         "Bourbon Hogshead" => "波本猪头桶",
         "2nd Fill Barrel" => "第二次装填Barrel桶",
         "1st Fill Bourbon Barrel" => "初填波本Barrel桶",
+        "1st Fill Sherry Butt Finish" => "初填雪莉Butt桶收尾",
         "4 Refill Hogheads" => "四个再填猪头桶",
         "Hogshead" => "猪头桶",
         "2 Hogsheads" => "两个猪头桶",
