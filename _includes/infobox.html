@@ -32,6 +32,8 @@
             {% if info.chinese %}
                 {% if info.full_name %}
                     <h4 class="card-text">{{info.chinese}}({{title}})<br/>{{ info.excerpt | strip_html | truncate: 50 | truncatewords: 30 }}</h4>
+                {% else %}
+                    <h4 class="card-text">{{info.chinese}}<br/>{{ info.excerpt | strip_html | truncate: 50 | truncatewords: 30 }}</h4>
                 {% endif %}
             {% elsif info.full_name %}
                     <h4 class="card-text">{{title}}<br/>{{ info.excerpt | strip_html | truncate: 50 | truncatewords: 30 }}</h4>
