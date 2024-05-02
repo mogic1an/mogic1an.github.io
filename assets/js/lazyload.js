@@ -120,6 +120,7 @@
    */
   function _intersection(entries) {
     // Disconnect if we've already loaded all of the images
+    console.log("CALLBACK!");
     if (elsLength === 0) {
       observer.disconnect();
     }
@@ -127,7 +128,10 @@
     for (var i = 0; i < entries.length; i++) {
       var entry = entries[i];
       // Are we in viewport?
+      console.log("entry: ", entry.target);
+      console.log("ratio: ", entry.intersectionRatio);
       if (entry.intersectionRatio > 0) {
+        console.log("OHSHIT!");
         elsLength--;
         // Stop watching this and load the image
         observer.unobserve(entry.target);
@@ -198,6 +202,7 @@
       elsLength = els.length;
       for (i = 0; i < elsLength; i++) {
         if (els[i] && els[i].lazyloaded === undefined) {
+          //console.log("Ah good good for ", els[i]);
           observer.observe(els[i]);
         }
       }
@@ -222,7 +227,9 @@
     // grab elements to lazy load
     els = _htmlCollectionToArray(document.querySelectorAll(options.elements));
     elsLength = els.length;
+    console.log("There are", elsLength);
     frameCount = options.maxFrameCount;
+    console.log("Frame Count", frameCount);
     // go go go
     _setSrcs();
   }
@@ -245,6 +252,7 @@
     } else {
       checkType = 'old';
     }
+    console.log(checkType);
     _init();
     if (options.pageUpdatedEventName) {
       document.addEventListener(options.pageUpdatedEventName, _init, true);

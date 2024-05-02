@@ -8,7 +8,7 @@
                 {% if info.image %}
 
                     {% if site.lazyimages == "enabled" %}
-                        <img class="img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}">
+                        <img class="img-fluid lazyimg" src="/assets/images/transparent.png" data-src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}">
                     {% else %}
                         <img class="img-fluid" src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}"> 
                     {% endif %}

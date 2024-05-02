@@ -15,6 +15,6 @@ echo -n "documents = " >> assets/js/index.js
 cat doc.json >> assets/js/index.js
 rm index.json doc.json
 rm -rf _site
-#git add assets/js/index.js
-#git commit -m 'add index.js'
-#git push
+git add assets/js/index.js
+git commit -m 'add index.js'
+git push
