@@ -6,15 +6,15 @@
         <div class="maxthumb">
             <a href="{{ site.baseurl }}{{ info.url | remove: 'details.html'}}">
                 {% if info.image %}
-                    {% if info.margin %}
-                        {% assign margin = info.margin %}
+                    {% if info.fit %}
+                        {% assign fit = info.fit %}
                     {% else %}
-                        {% assign margin = "0px"%}
+                        {% assign fit = "cover"%}
                     {% endif %}
                     {% if site.lazyimages == "enabled" %}
-                    <img class="img-fluid lazyimg" src="/assets/images/transparent.png" data-src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}" style="height:210px;object-fit:cover">
+                    <img class="img-fluid lazyimg" src="/assets/images/transparent.png" data-src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}" style="height:210px;object-fit:{{fit}};background-color: white">
                     {% else %}
-                        <img class="img-fluid" src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}" style="height:210px;object-fit:cover">
+                    <img class="img-fluid" src="{% if info.image contains "://" %}{{ info.image }}{% else %}{{ site.baseurl }}/{{ info.image }}{% endif %}" alt="{{ info.title }}" style="height:210px;object-fit:{{cover}};background-color: white">
                     {% endif %}
 
                 {% else %}

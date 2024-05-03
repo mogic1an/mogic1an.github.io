@@ -18,7 +18,7 @@ score: 81
 nose: 85
 taste: 80
 finish: 78
-margin: -260px
+margin: -300px
 serie: Aston Martin Edition
 wb: https://www.whiskybase.com/whiskies/whisky/234725/bowmore-18-year-old
 ---

@@ -81,7 +81,14 @@ post_class: post-template
                 {% if page.bottler and page.bottler.size > 0 %}
                     {% assign bottler = page.bottler | first %}
                     <strong>装瓶商:</strong> &nbsp;{% for bottler in page.bottler %}
-                     {{site.data.bottler_infos[bottler].chinese}}
+                     {% if site.data.bottler_infos[bottler].chinese %}
+                         {{site.data.bottler_infos[bottler].chinese}}
+                     {% elsif site.data.bottler_infos[bottler].full_name %}
+                         {{site.data.bottler_infos[bottler].full_name }}
+                     {% else %}
+                         {{site.data.bottler_infos[bottler].bottler }}
+                     {% endif %}
+                        &nbsp;
                      {% endfor %}<br/>
                 {% endif %}
                 {% if page.serie %}
