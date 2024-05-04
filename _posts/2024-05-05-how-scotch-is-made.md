@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "苏格兰麦芽威士忌制程简介"
+title:  "苏格兰麦芽威士忌制程简介（更新中）"
 author: tony
 image: assets/images/distill.jpg
 categories:
