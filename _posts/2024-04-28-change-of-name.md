@@ -8,7 +8,6 @@ categories:
   - 法规
   - 术语
 aliases: 
-featured: true
 distillery: 
   - Cardhu
 date: 2024-04-28
