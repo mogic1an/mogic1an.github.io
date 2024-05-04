@@ -10,7 +10,7 @@ post_class: post-template
     <h1 class="sitetitle">{{ page.title }}</h1>
     <p>
         {{info.chinese}}
-        {% assign excerpt = info.content | strip_html | truncate: 50 | strip_newlines %}
+        {% assign excerpt = info.excerpt | strip_html | truncate: 50 | strip_newlines %}
         {% if excerpt != "" %}
             - {{ excerpt }} <a class="text-green" href="{{site.data.distillery_infos[page.title].url}}">更多</a>
         {% endif %}

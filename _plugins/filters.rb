@@ -13,7 +13,8 @@ module Jekyll
         "Speyside" => "斯贝赛",
         "Cambell Town" => "坎贝尔镇",
         "Islay" => "艾雷岛",
-        "Islands" => "岛屿"
+        "Islands" => "岛屿",
+        "Ireland" => "爱尔兰"
       }[region]
     end
     def cask_to_chinese(cask)
