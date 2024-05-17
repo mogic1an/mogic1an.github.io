@@ -43,6 +43,8 @@ module Jekyll
         "Hogshead" => "猪头桶",
         "2 Hogsheads" => "两个猪头桶",
         "Moscatel Finish" => "莫斯卡托桶收尾",
+        "Sherry Casks" => "多个雪莉桶",
+        "New Oak Cask (Char No.3)" => "新橡木桶(烘烤度3)",
 
       }[cask]
     end
