@@ -1,4 +1,4 @@
-distillery_regions = ["Highland", "Lowland", "Speyside", "Cambell Town", "Islay", "Islands", "Ireland"]
+distillery_regions = ["Highland", "Lowland", "Speyside", "Cambell Town", "Islay", "Islands", "Ireland", "India"]
 
 # edit metadata
 Jekyll::Hooks.register :site, :post_read do |site|
@@ -74,6 +74,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
     "Speyside" => "斯贝赛",
     "Cambell Town" => "坎贝尔镇",
     "Islay" => "艾雷岛",
-    "Islands" => "岛屿"
+    "Islands" => "岛屿",
+    "Ireland" => "爱尔兰",
+    "India" => "印度"
   }
 end

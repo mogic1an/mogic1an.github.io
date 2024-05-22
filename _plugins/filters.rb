@@ -24,9 +24,11 @@ module Jekyll
         "Bourbon" => "波本桶",
         "Oloroso" => "Oloroso雪莉桶",
         "PX" => "PX雪莉桶",
+        "Ex-Pedro Ximenez Cask" => "PX雪莉桶",
         "PX Hogshead" => "PX猪头桶",
         "Butt" => "Butt桶",
         "Rum Quarter Cask" => "朗姆四分之一桶",
+        "French Oak" => "法国橡木桶",
         "French Oak Barrique" => "法国橡木红酒桶",
         "Refill Butt" => "再填Butt桶",
         "Refill Hogshead" => "再填猪头桶",
@@ -36,6 +38,7 @@ module Jekyll
         "2nd Fill Barrel" => "第二次装填Barrel桶",
         "1st Fill Bourbon Barrel" => "初填波本Barrel桶",
         "Bourbon Barrel" => "波本Barrel桶",
+        "1st Fill PX Hogshead" => "初填PX猪头桶",
         "1st Fill Sherry Butt Finish" => "初填雪莉Butt桶收尾",
         "1st Fill Oloroso Butt" => "初填Oloroso雪莉Butt桶",
         "Sherry Butt" => "雪莉Butt桶",
@@ -45,7 +48,8 @@ module Jekyll
         "Moscatel Finish" => "莫斯卡托桶收尾",
         "Sherry Casks" => "多个雪莉桶",
         "New Oak Cask (Char No.3)" => "新橡木桶(烘烤度3)",
-
+        "Oloroso Sherry Puncheon" => "Oloroso雪莉邦穹桶",
+        "Palo Cortado Sherry Butt" => "Palo Cortado雪莉Butt桶",
       }[cask]
     end
   end
