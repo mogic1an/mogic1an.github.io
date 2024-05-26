@@ -24,7 +24,6 @@ wb: https://www.whiskybase.com/whiskies/whisky/222673/blended-malt-scotch-whisky
 
 ## 闻香
 两部分。有类似96本尼的黄油水果，桃子，菠萝，黄色水果。另一方面有一个非常奇特的味道，盐腌坚果，隐隐的焦糖，吐司，粉笔和茶香。
-Ends a bit short, hints of tea, maltiness, heather, leaf 87
 
 ## 品饮
 变化的神。前段非常正常的黄色水果，蜂蜜，麦芽。中段画风突变，一下子冒出皂味，樟脑，偏热带一些的欧石楠，绿茶。再添上延续了闻香的一些盐腌坚果，一丝丝塑料。
