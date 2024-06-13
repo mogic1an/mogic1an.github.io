@@ -18,30 +18,48 @@ module Jekyll
       }[region]
     end
     def cask_to_chinese(cask)
-      {
+      caskdef = {
         "American Oak" => "美国橡木桶",
         "Rivesaltes" => "Rivesaltes甜红酒桶",
+        "Sauternes" => "苏玳桶",
+        "Port" => "波特桶",
         "Bourbon" => "波本桶",
+        "Malbec" => "马尔贝克红酒桶",
         "Oloroso" => "Oloroso雪莉桶",
         "PX" => "PX雪莉桶",
         "Ex-Pedro Ximenez Cask" => "PX雪莉桶",
         "PX Hogshead" => "PX猪头桶",
+        "Palo Cortado Hogshead" => "Palo Cortado猪头桶",
         "Butt" => "Butt桶",
         "Rum Quarter Cask" => "朗姆四分之一桶",
         "French Oak" => "法国橡木桶",
+        "French Oak Wine" => "法国橡木红酒桶",
         "French Oak Barrique" => "法国橡木Barrique桶",
         "Refill Butt" => "再填Butt桶",
+        "Refill Barrel" => "再填Barrel桶",
+        "Refill Sherry Butt" => "再填雪莉Butt桶",
+        "Refill Sherry Hogshead" => "再填雪莉猪头桶",
         "Refill Sherry Butts" => "多个再填雪莉Butt桶",
+        "Refill Sherry Casks" => "多个再填雪莉桶",
+        "Refill Sherry" => "再填雪莉桶",
         "Refill Hogshead" => "再填猪头桶",
         "Refill Bourbon Hogshead" => "再填波本猪头桶",
         "Refill American Oak Hogshead" => "再填美国橡木猪头桶",
         "Bourbon Hogshead" => "波本猪头桶",
         "2nd Fill Barrel" => "第二次装填Barrel桶",
+        "1st Fill Bourbon" => "初填波本桶",
         "1st Fill Bourbon Barrel" => "初填波本Barrel桶",
         "Bourbon Barrel" => "波本Barrel桶",
         "1st Fill PX Hogshead" => "初填PX猪头桶",
+        "1st Fill Bourbon Hogsheads" => "多个初填波本猪头桶",
+        "1st Fill Sauternes Hogshead" => "初填苏玳猪头桶",
         "1st Fill Sherry Butt Finish" => "初填雪莉Butt桶收尾",
         "1st Fill Oloroso Butt" => "初填Oloroso雪莉Butt桶",
+        "1st Fill Oloroso" => "初填Oloroso雪莉桶",
+        "1st Fill Amarone" => "初填Amarone红酒桶",
+        "2nd Fill Amarone" => "第二次装填Amarone红酒桶",
+        "2nd Fill French Oak" => "第二次装填法国橡木桶",
+        "Sherry" => "雪莉桶",
         "Sherry Butt" => "雪莉Butt桶",
         "4 Refill Hogsheads" => "四个再填猪头桶",
         "Hogshead" => "猪头桶",
@@ -51,8 +69,11 @@ module Jekyll
         "White Oak Casks" => "多个白色橡木桶",
         "New Oak Cask (Char No.3)" => "新橡木桶(烘烤度3)",
         "Oloroso Sherry Puncheon" => "Oloroso雪莉邦穹桶",
+        "Rhone Syrah Wine Casks" => "多个隆纳河谷希拉红酒桶",
         "Palo Cortado Sherry Butt" => "Palo Cortado雪莉Butt桶",
-      }[cask]
+      }
+      raise "Missing cask translation for #{cask}" unless caskdef.key?(cask)
+      caskdef[cask]
     end
   end
 end

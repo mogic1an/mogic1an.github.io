@@ -1,6 +1,3 @@
-def slugify(str)
-  return str.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-end
 
 module DistilleryPlugin
   class DistilleryPageGenerator < Jekyll::Generator
