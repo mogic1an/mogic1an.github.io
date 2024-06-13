@@ -1,7 +1,5 @@
 def slugify(str)
-  ret = str.downcase.strip.gsub(' ', '-').gsub('.', '-').gsub(/[^\w-]/, '').gsub(/-+/, '-')
-  Jekyll.logger.warn ret
-  ret
+  str.downcase.strip.gsub(' ', '-').gsub('.', '-').gsub(/[^\w-]/, '').gsub(/-+/, '-')
 end
 
 module BottlerPlugin
