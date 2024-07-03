@@ -16,9 +16,9 @@ strength: 54.3
 cask_type:
   - Bourbon
   - Sherry
-score: 89.67
-nose: 90
-taste: 90
+score: 90.33
+nose: 91
+taste: 91
 finish: 89
 wb: https://www.whiskybase.com/whiskies/whisky/77661/springbank-16-year-old
 margin: -420px
