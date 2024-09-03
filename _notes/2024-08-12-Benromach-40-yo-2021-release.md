@@ -18,7 +18,7 @@ nose: 92
 taste: 91
 finish: 90
 wb: https://www.whiskybase.com/whiskies/whisky/190001
-margin: -1050px
+margin: -450px
 ---
 布食哥们，怎么WB92+。就这个sample而言我感觉和我想的雪莉桶还是不太一样。
 闻香而言是很舒适的香气，各式各样的深色水果，蜂蜜，带药草和花香。

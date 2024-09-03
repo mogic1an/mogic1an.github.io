@@ -86,6 +86,7 @@ module Jekyll
         "New Oak Cask (Char No.3)" => "新橡木桶(烘烤度3)",
         "Oloroso Sherry Puncheon" => "Oloroso雪莉邦穹桶",
         "Oloroso Sherry Butt" => "Oloroso雪莉Butt桶",
+        "Recharred Sherry Butt" => "重新烘烤雪莉Butt桶",
         "Rhone Syrah Wine Casks" => "多个隆纳河谷希拉红酒桶",
         "Palo Cortado Sherry Butt" => "Palo Cortado雪莉Butt桶",
       }

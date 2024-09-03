@@ -2,7 +2,7 @@
 layout: note
 title: "欧肯特轩 1991 海绵 No.84"
 author: tony
-image: https://static.whiskybase.com/storage/whiskies/2/4/4195/439275-big.jpg
+image: assets/images/439275-big.jpg
 categories:
   - 低地
 aliases: "Auchentoshan 1991 WSP No.84"

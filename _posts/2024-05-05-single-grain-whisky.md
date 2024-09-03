@@ -8,7 +8,6 @@ categories:
   - 谷物威士忌
   - 短文
 aliases: 
-featured: true
 distillery: 
   - North British
   - Cameronbridge
