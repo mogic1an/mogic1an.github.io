@@ -18,7 +18,7 @@ nose: 88
 taste: 89
 finish: 86
 wb: https://www.whiskybase.com/whiskies/whisky/258240/togouchi-misty
-margin: -480px
+margin: -200px
 ---
 结构上和集中度都没问题，就是风味有点怪。不过这个年份做出这个效果也挺厉害了。
 
