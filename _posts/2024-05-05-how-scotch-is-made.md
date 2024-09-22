@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "苏格兰麦芽威士忌制程简介（拖更中）"
-author: tony
+author: tony,brian
 image: assets/images/distill.jpg
 categories:
   - 苏威
