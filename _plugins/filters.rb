@@ -53,6 +53,7 @@ module Jekyll
         "2nd Fill Barrel" => "第二次装填Barrel桶",
         "1st Fill American Oak Barrel" => "初填美国橡木Barrel桶",
         "American Oak Sherry Casks" => "多个美国橡木雪莉桶",
+        "American Oak Bourbon Hogshead" => "美国橡木波本猪头桶",
         "1st Fill Bourbon" => "初填波本桶",
         "1st Fill Bourbon Barrel" => "初填波本Barrel桶",
         "1st Fill Bourbon Hogshead" => "初填波本猪头桶",
@@ -74,6 +75,8 @@ module Jekyll
         "Refill European Oak Butt" => "欧洲橡木Butt桶",
         "Sherry" => "雪莉桶",
         "Amarone Finish" => "Amarone红酒桶收尾",
+        "Grand Cru" => "特级园红酒桶",
+        "Tequila Finish" => "龙舌兰桶收尾",
         "Barrel" => "Barrel桶",
         "Sherry Butt" => "雪莉Butt桶",
         "4 Refill Hogsheads" => "四个再填猪头桶",
@@ -89,6 +92,9 @@ module Jekyll
         "Recharred Sherry Butt" => "重新烘烤雪莉Butt桶",
         "Rhone Syrah Wine Casks" => "多个隆纳河谷希拉红酒桶",
         "Palo Cortado Sherry Butt" => "Palo Cortado雪莉Butt桶",
+        "Essencia Barrique" => "Essencia Barrique桶",
+        "Ribero Del Duero Cask" => "杜埃罗河畔红酒桶",
+        "Rioja Cask" => "里奥哈红酒桶",
       }
       raise "Missing cask translation for #{cask}" unless caskdef.key?(cask)
       caskdef[cask]

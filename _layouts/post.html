@@ -16,13 +16,15 @@ post_class: post-template
         </div>
 
         <!-- Post -->
-        {% assign author = site.authors[page.author] %}
 
         <div class="col-md-9 flex-first flex-md-unordered">
             <div class="mainheading">
 
                 <!-- Author Box -->
                 {% if page.author %}
+                {% assign all_authors = page.author | split: ","%}
+                {% for author_name in all_authors %}
+                {% assign author = site.authors[author_name] %}
                 <div class="row post-top-meta">
                     <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
                         {% if author.avatar %}
@@ -37,6 +39,7 @@ post_class: post-template
                         <span class="author-description">{{ author.description }}</span>
                     </div>
                 </div>
+                {% endfor %}
                 {% endif %}
 
                 <!-- Post Title -->
